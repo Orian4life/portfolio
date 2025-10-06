@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(120deg, #013220, #025c33, #013220);
+      color: #fff;
+      margin: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      padding: 1rem 5%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #39ff14;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #39ff14;
+    }
+
+    /* Project Detail Section */
+    .project-detail-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      padding: 4rem 5%;
+    }
+
+    .image-gallery {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      border: 3px solid #39ff14;
+      box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .thumbnails img {
+      width: 80px;
+      border-radius: 10px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .thumbnails img:hover {
+      opacity: 1;
+      transform: scale(1.05);
+      border-color: #39ff14;
+    }
+
+    .project-info {
+      flex: 1;
+      min-width: 300px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.1);
+    }
+
+    .project-info h2 {
+      color: #39ff14;
+      margin-bottom: 1rem;
+    }
+
+    .project-info p {
+      margin-bottom: 1.5rem;
+      color: #ccc;
+    }
+
+    .project-info ul {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-info li {
+      margin: 0.5rem 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      color: #013220;
+      background: #39ff14;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+      color: #013220;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.3);
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="logo">MyPortfolio</a>
+  <ul class="nav-links">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#about">About Me</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <!-- PROJECT DETAIL SECTION -->
+  <div class="project-detail-container">
+    <div class="image-gallery">
+      <img id="mainImage" src="project1.jpg" alt="Main Project">
+      <div class="thumbnails">
+        <img src="project1.jpg" onclick="changeImage(this.src)">
+        <img src="project2.jpg" onclick="changeImage(this.src)">
+        <img src="project3.jpg" onclick="changeImage(this.src)">
+      </div>
+    </div>
+
+    <div class="project-info">
+      <h2>Portfolio Website</h2>
+      <p>This project is a modern portfolio website with smooth animations, responsive design, and a professional look built using HTML, CSS, and JavaScript.</p>
+      <ul>
+        <li><strong>Tech Stack:</strong> HTML, CSS, JavaScript</li>
+        <li><strong>Role:</strong> Frontend Developer</li>
+      </ul>
+      <a href="#" class="btn">View Live Project</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 MyPortfolio | Designed with 💚
+  </footer>
+
+  <script>
+    function changeImage(src) {
+      document.getElementById("mainImage").src = src;
+    }
+  </script>
+</body>
+</html>
